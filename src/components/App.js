@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Container, Grid, Menu, Input, Sticky } from "semantic-ui-react";
+import { Container, Grid, Menu, Input } from "semantic-ui-react";
 import { fetchContacts } from "../actions/contactActions";
 import "./App.css";
 import Feed from "./Feed";
@@ -24,7 +25,9 @@ class App extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   handleSearchChange = (e, data) => {
-    clearTimeout(this.state.typingTimeout);
+    const { typingTimeout } = this.state;
+
+    clearTimeout(typingTimeout);
 
     this.state.typingTimeout = setTimeout(() => {
       this.setState({ searchQuery: data.value });
@@ -91,6 +94,10 @@ class App extends Component {
 }
 
 const mapDispatchToProps = { fetchContacts };
+
+App.propTypes = {
+  fetchContacts: PropTypes.func.isRequired
+};
 
 export default connect(
   null,
