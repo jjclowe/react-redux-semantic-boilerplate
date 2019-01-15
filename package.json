@@ -1,0 +1,31 @@
+{
+  "name": "react-redux-semantic-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for building web app front-ends using react, redux and semantic.",
+  "author": "James Lowe",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.0",
+    "prettier": "^1.15.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^6.0.0",
+    "react-scripts": "1.0.17",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.84.0"
+  },
+  "proxy": "http://localhost:5000"
+}
